@@ -3,7 +3,8 @@ dotenv.config();
 
 export const config = {
   port: process.env.PORT || 8080,
-  authServiceUrl: process.env.AUTH_SERVICE_URL || "https://predict4-life-auth-service.vercel.app",
+  authServiceUrl: process.env.AUTH_SERVICE_URL || "http://localhost:5000",
   mlServiceUrl: process.env.ML_SERVICE_URL || "http://localhost:8000",
+  donorServiceUrl: process.env.DONOR_SERVICE_URL || "http://localhost:3001",
   jwtSecret: process.env.JWT_SECRET || "supersecret123",
 };

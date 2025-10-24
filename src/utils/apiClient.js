@@ -12,3 +12,8 @@ export const authClient = axios.create({
   baseURL: config.authServiceUrl,
   timeout: 5000,
 });
+
+export const donorClient = axios.create({
+  baseURL: config.donorServiceUrl,
+  timeout: 5000,
+});
