@@ -3,7 +3,7 @@ import { donorClient } from "../utils/apiClient.js";
 export const getAllDonors = async (req, res) => {
   try {
     // add /api prefix
-    const { data } = await donorClient.get("/api/donors");
+    const { data } = await donorClient.get("/");
     res.json(data);
   } catch (err) {
     console.error(err.response?.data || err.message);
@@ -14,7 +14,7 @@ export const getAllDonors = async (req, res) => {
 export const getDonorById = async (req, res) => {
   try {
     const { id } = req.params;
-    const { data } = await donorClient.get(`/api/donors/${id}`);
+    const { data } = await donorClient.get(`/${id}`);
     res.json(data);
   } catch (err) {
     console.error(err.response?.data || err.message);
