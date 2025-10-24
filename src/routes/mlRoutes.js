@@ -3,7 +3,8 @@ import {
   predictUsage,
   predictCollection,
   predictWastage,
-  predictCamp
+  predictCamp,
+  predictBloodUsage,
 } from "../controllers/mlController.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 
@@ -13,5 +14,6 @@ router.post("/usage", verifyToken, predictUsage);
 router.post("/collection", verifyToken, predictCollection);
 router.post("/wastage", verifyToken, predictWastage);
 router.post("/camp", verifyToken, predictCamp);
+router.post("/blood-usage", verifyToken, predictBloodUsage);
 
 export default router;
